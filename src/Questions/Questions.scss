@@ -1,10 +1,9 @@
 .questions {
-  height: 200px;
-  width: 500px;
-
+  position: absolute;
+  width: 50vh;
+  left: 30vh;
   .first-line {
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
   .second-line {
@@ -15,7 +14,6 @@
     img {
       width: 35px;
       margin: 5px;
-      margin-left: 70px;
     }
     p {
       user-select: none;
@@ -23,22 +21,52 @@
   }
 }
 
-    .cta {
-      font-family: "Dosis", sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      height: 45px;
-      width: 120px;
-      user-select: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      appearance: none;
-      background-color: #00b8c0;
-      border: none;
-      border-radius: 12.5px;
-      color: #1b3c68;
-      &:focus {
-        outline: none;
+@media screen and (max-width: 800px){
+  .questions {
+    top: 20vh;
+    width: 40vh;
+    left: unset;
+    .first-line {
+      flex-direction: column;
+      .select-wrapper:first-child {
+        margin-bottom: 20px;
       }
     }
+  }
+}
+
+@media only screen
+  and (min-width: 1024px)
+  and (max-height: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .questions {
+    position: absolute;
+    width: 40vh;
+    top: 25vh;
+    left: unset;
+  }
+}
+
+.cta {
+  position: absolute;
+  right: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  height: 45px;
+  width: 120px;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #00b8c0;
+  border: none;
+  border-radius: 12.5px;
+  color: #1b3c68;
+  margin-top: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}

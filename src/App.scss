@@ -7,4 +7,41 @@
   letter-spacing: 1px;
   font-weight: 200;
   user-select: none;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  .homepage-icon {
+    position: absolute;
+    width: 40vh;
+    bottom: 5vh;
+    right: 20vh;
+  }
+
+  .heading {
+    position: absolute;
+    margin: auto;
+    top: 5vh;
+    color: #7E9FCB;
+  }
+
+  @media screen and (max-width: 768px){
+    .homepage-icon {
+      width: 30vh;
+      bottom: 5vh;
+      right: unset;
+    }
+  }
+
+@media only screen and (max-width: 1366px) {
+
+}
+  @media only screen
+  and (min-width: 1024px)
+  and (max-height: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .homepage-icon {
+      position: absolute;
+      bottom: 5vh;
+    }
+  }
 }

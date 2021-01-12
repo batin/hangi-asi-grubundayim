@@ -6,6 +6,7 @@
   justify-content: center;
   position: relative;
   padding: 0 0 0 15px;
+  min-width: 200px;
   .select {
     font-family: "Dosis", sans-serif;
     font-size: 16px;
@@ -39,12 +40,4 @@
   .dropdown-icon {
     width: 25px;
   }
-}
-
-.sm {
-  width: 100px;
-}
-
-.xl {
-  width: 350px;
 }
