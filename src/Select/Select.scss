@@ -1,0 +1,50 @@
+.select-wrapper {
+  height: 45px;
+  background-color: #e7eff3;
+  border-radius: 12.5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 0 0 15px;
+  .select {
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: #e7eff3;
+    border: none;
+    border-radius: 12.5px;
+    &:focus {
+      outline: none;
+    }
+    padding: 5px;
+  }
+}
+
+.dropdown-wrapper {
+  position: absolute;
+  width: 55px;
+  height: 45px;
+  right: 0;
+  display: flex;
+  pointer-events: none;
+  justify-content: center;
+  background-color: #00b8c0;
+  border-bottom-right-radius: 12.5px;
+  border-top-right-radius: 12.5px;
+  .dropdown-icon {
+    width: 25px;
+  }
+}
+
+.sm {
+  width: 100px;
+}
+
+.xl {
+  width: 350px;
+}

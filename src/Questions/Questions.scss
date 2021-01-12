@@ -1,0 +1,44 @@
+.questions {
+  height: 200px;
+  width: 500px;
+
+  .first-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .second-line {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 35px;
+      margin: 5px;
+      margin-left: 70px;
+    }
+    p {
+      user-select: none;
+    }
+  }
+}
+
+    .cta {
+      font-family: "Dosis", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      height: 45px;
+      width: 120px;
+      user-select: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      background-color: #00b8c0;
+      border: none;
+      border-radius: 12.5px;
+      color: #1b3c68;
+      &:focus {
+        outline: none;
+      }
+    }
