@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.scss";
-import { Questions } from "./Questions/Questions.js";
 import { WithInfo } from "./Hocs/With-info";
-import Richie from "./Assets/richie.svg";
+import Richie from "./Assets/richie.png";
+import { Content } from "./Content/Content";
 
-function App() {
+function App() {  
   return (
     <div className="App">
       <WithInfo>
         <h1 className="heading">Hangi aşı grubundayım?</h1>
-        <Questions />
+        <Content/>
         <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
       </WithInfo>
     </div>

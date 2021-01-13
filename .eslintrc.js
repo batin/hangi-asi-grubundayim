@@ -5,6 +5,7 @@ module.exports = {
         "node": true
     },
     "extends": "plugin:react/recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": false

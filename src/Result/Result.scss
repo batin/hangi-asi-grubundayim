@@ -1,0 +1,89 @@
+.result {
+  position: absolute;
+  font-family: "Dosis", sans-serif;
+  width: 40vh;
+  left: 40vh;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #7E9FCB;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-items: center;
+  align-items: center;
+  .result-heading {
+    display: flex;
+    margin: 20px 0;
+    .result-text {
+      font-size: 25px;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    .group {
+      line-height: 21px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px !important;
+      border: 3px solid white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+  }
+  .separator {
+    width: 100%;
+    border: 1px solid white;
+  }
+  
+  .survey {
+    text-align: center;
+    width: 100%;
+
+    h2 {
+      margin: 10px 0 15px 0;
+      font-size: 22px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        border: none;
+        width: 100%;
+        height: 50px;
+        margin: 5px;
+        background-color: white;
+        font-size: 18px;
+        font-family: "Dosis", sans-serif;
+        border-radius: 2px;
+      }
+      .left {
+        border-bottom-left-radius: 15px;
+      }
+      .right {
+        border-bottom-right-radius: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .result {
+    top: 20vh;
+    width: 40vh;
+    left: unset;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .result {
+    top: 20vh;
+  }
+}

@@ -21,7 +21,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 815px) {
   .questions {
     top: 20vh;
     width: 40vh;
@@ -35,12 +35,9 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (max-width: 1366px) {
   .questions {
-    position: absolute;
-    width: 40vh;
-    top: 25vh;
-    left: unset;
+    top: 20vh;
   }
 }
 

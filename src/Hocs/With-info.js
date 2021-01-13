@@ -66,6 +66,7 @@ const WithInfo = ({ children }) => {
       setGroup(decision);
     }
   };
+
   const props = {
     hasDisease,
     changeHasDisease,
@@ -80,6 +81,7 @@ const WithInfo = ({ children }) => {
     ageOptions,
     occupationOptions,
   };
+  
   return <InfoProvider value={props}>{children}</InfoProvider>;
 };
 
