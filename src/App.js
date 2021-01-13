@@ -1,21 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import { WithInfo } from "./Hocs/With-info";
 import Richie from "./Assets/richie.png";
 import twitter from "./Assets/twitter.webp";
 import { Content } from "./Content/Content";
-import TagManager from 'react-gtm-module'
- 
-const tagManagerArgs = {
-    gtmId: 'GTM-WRQT75N',
-    dataLayer: {
-      event: "pageview"
-    }
-}
- 
-TagManager.initialize(tagManagerArgs)
 
-function App() {  
+function App() {
+  
+  useEffect(() => {
+    window.send({event: `PageView`})
+  }, [])
+
   return (
     <div className="App">
       <WithInfo>

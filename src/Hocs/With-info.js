@@ -64,6 +64,7 @@ const WithInfo = ({ children }) => {
         diseasePriority,
       ];
       const decision = decisionArray.sort()[0];
+      window.send({ UserAge: selectedAge.type, UserOccupation: selectedOcc.type })
       setGroup(decision);
     }
   };

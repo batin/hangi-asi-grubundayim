@@ -9,17 +9,12 @@ const Result = () => {
 
   useEffect(() => {
     const hasVoted = localStorage.getItem('voted');
-    window.dataLayer.push({
-      group: `${group}. group`
-    });
+    window.send({ UserGroup: `${group}. group` })
     setShow(Boolean(!hasVoted));
   }, [])
 
   const sendEvent = (event) => {
-    window.dataLayer.push({
-      event: event,
-      group: `${group}. group`
-    });
+    window.send({ UserGroup: `${group}. group`, Vote: event })
     localStorage.setItem('voted', 'true');
     setShow(false);
   };
