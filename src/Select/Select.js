@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Select.scss";
 import DropdownIcon from "../Assets/dropdown-item.svg";
 
-const Select = ({ options, value  = -1, setValue, firstValue }) => {
+const Select = ({ options, value = -1, setValue, firstValue }) => {
   return (
     <div className="select-wrapper xl">
       <select
@@ -11,9 +11,13 @@ const Select = ({ options, value  = -1, setValue, firstValue }) => {
         onChange={(e) => setValue(e.target.value)}
       >
         {value === -1 && firstValue}
-        {Array.isArray(options) &&
+        {options && Array.isArray(options) &&
           options.map((option) => {
-            return <option key={option.type} value={option.type}> {option.type} </option>;
+            return (
+              <option key={option.type} value={option.type}>
+                {option.type}
+              </option>
+            );
           })}
       </select>
       <div className="dropdown-wrapper">

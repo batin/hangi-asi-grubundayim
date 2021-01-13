@@ -6,7 +6,7 @@ import Richie from "./Assets/richie.svg";
 function App() {
   return (
     <div className="App">
-      <WithInfo >
+      <WithInfo>
         <h1 className="heading">Hangi aşı grubundayım?</h1>
         <Questions />
         <img className="homepage-icon" src={Richie} alt="Homepage Icon" />

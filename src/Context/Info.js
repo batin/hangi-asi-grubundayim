@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 const defaultContext = {
   hasDisease: false,
   age: "",
-  occupation: ""
-}
+  occupation: "",
+};
 
 const InfoContext = React.createContext(defaultContext);
 
