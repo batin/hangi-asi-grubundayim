@@ -21,9 +21,15 @@
   }
 }
 
-@media screen and (max-width: 815px) {
+@media only screen and (max-width: 1366px) {
   .questions {
     top: 20vh;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .questions {
+    top: 12vh;
     width: 40vh;
     left: unset;
     .first-line {
@@ -35,11 +41,7 @@
   }
 }
 
-@media only screen and (max-width: 1366px) {
-  .questions {
-    top: 20vh;
-  }
-}
+
 
 .cta {
   position: absolute;

@@ -17,9 +17,9 @@ const WithInfo = ({ children }) => {
   const occupationOptions = [
     { type: "Sağlık çalışanı", priority: 1 },
     { type: "Kalabalık ortamlarda çalışan", priority: 2 },
-    { type: "Diğer", priority: 3 },
-    { type: "İşsiz", priority: 4 },
     { type: "Öğrenci", priority: 4 },
+    { type: "İşsiz", priority: 4 },
+    { type: "Diğer", priority: 3 },
   ];
 
   const changeHasDisease = (disease) => {
