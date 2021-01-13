@@ -11,14 +11,15 @@ const WithInfo = ({ children }) => {
   const ageOptions = [
     { type: "65 yaş üzeri", priority: 1 },
     { type: "50-65 yaş arası", priority: 2 },
-    { type: "20-50 yaş arası", priority: 3 },
-    { type: "20 yaş altı", priority: 4 },
+    { type: "30-50 yaş arası", priority: 3 },
+    { type: "30 yaş altı", priority: 4 },
   ];
   const occupationOptions = [
     { type: "Sağlık çalışanı", priority: 1 },
     { type: "Kalabalık ortamlarda çalışan", priority: 2 },
     { type: "Diğer", priority: 3 },
     { type: "İşsiz", priority: 4 },
+    { type: "Öğrenci", priority: 4 },
   ];
 
   const changeHasDisease = (disease) => {
