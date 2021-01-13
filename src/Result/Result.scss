@@ -32,16 +32,28 @@
       height: 35px;
       padding: 5px;
       margin-right: 10px;
+      span {
+        position: absolute;
+        margin-left: 22px;
+      }
     }
   }
   .separator {
     width: 100%;
     border: 1px solid white;
   }
-  
+  .result-info {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    color: white;
+    font-size: 13px;
+  }
+
   .survey {
     text-align: center;
     width: 100%;
+    
 
     h2 {
       margin: 10px 0 15px 0;
@@ -59,6 +71,7 @@
         width: 100%;
         height: 50px;
         margin: 5px;
+        margin-bottom: 15px;
         background-color: white;
         font-size: 18px;
         font-family: "Dosis", sans-serif;

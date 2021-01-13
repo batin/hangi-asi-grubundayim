@@ -16,6 +16,7 @@
     width: 40vh;
     bottom: 5vh;
     right: 20vh;
+    pointer-events: none;
   }
   
   .heading {
@@ -35,5 +36,12 @@
       bottom: 5vh;
       right: unset;
     }
+  }
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    color: #7E9FCB;
+    font-size: 15px;
   }
 }

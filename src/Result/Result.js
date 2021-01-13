@@ -3,26 +3,32 @@ import { useInfo } from "../Context/Info";
 import "./Result.scss";
 
 const Result = () => {
-  
+
   const { group } = useInfo();
   const [show, setShow] = useState(true);
-  
+
   useEffect(() => {
     const hasVoted = localStorage.getItem('voted');
+    window.dataLayer.push({
+      group: `${group}. group`
+    });
     setShow(Boolean(!hasVoted));
   }, [])
 
   const sendEvent = (event) => {
-    console.log(event)
+    window.dataLayer.push({
+      event: event,
+      group: `${group}. group`
+    });
     localStorage.setItem('voted', 'true');
-    setShow(false)
+    setShow(false);
   };
 
   return (
     <div className="result">
       <div className="result-heading">
-      <div className="group">{ group }.</div>
-      <h1 className="result-text" >aşı grubundasın.</h1>
+        <div className="group">{group} <span>.</span></div>
+        <h1 className="result-text" >aşı grubundasın.</h1>
       </div>
       { show && <div className="separator" />}
       { show &&
@@ -39,8 +45,9 @@ const Result = () => {
               Hayır
             </button>
           </div>
-        </div>) 
-        }
+        </div>)
+      }
+      { show && <p className="result-info">*Anket verileri <strong className="tooltip"> anonim</strong> şekilde saklanmaktadır.</p>}
     </div>
   );
 };
