@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.scss";
 import { Questions } from "./Questions/Questions.js";
 import { WithInfo } from "./Hocs/With-info";

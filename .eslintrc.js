@@ -7,7 +7,7 @@ module.exports = {
     "extends": "plugin:react/recommended",
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": false
         },
         "ecmaVersion": 12,
         "sourceType": "module"
@@ -16,5 +16,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/prop-types": 0
     }
 };
