@@ -23,11 +23,15 @@ function App() {
           <Route path="/">
             <WithInfo>
               <h1 className="heading">Hangi aşı grubundayım?</h1>
-              <Content />
-              <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
-            </WithInfo>
+              <div className="main">
+                <Content />
+                  <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
+              </div>
+              </WithInfo>
+            <div className="footer">
             <p className="info">*Hesaplamalar tahmini veriler ile yapılmaktadır.</p>
             <a href="https://twitter.com/btnerylmz" target="_blank" rel="noreferrer"><img className="twitter-icon" src={twitter} alt="Twitter Icon" /></a>
+            </div>
           </Route>
           <Route path="/1.html">
           </Route>

@@ -52,9 +52,11 @@ const Questions = () => {
           />
         )}
       </div>
-      <button className="cta" onClick={decideGroup}>
-        Hesapla
-      </button>
+      <div className="third-line">
+        <button className="cta" onClick={decideGroup}>
+          Hesapla
+        </button>
+      </div>
     </div>
   );
 };
