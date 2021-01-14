@@ -18,6 +18,10 @@ const Result = () => {
     localStorage.setItem('voted', 'true');
     setShow(false);
   };
+  
+  const redicectToTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?text=${group}.%20a%C5%9F%C4%B1%20grubunday%C4%B1m%21&url=https://hangiasigrubundayim.com/${group}.html`,"_blank")
+  }
 
   return (
     <div className="result">
@@ -32,17 +36,18 @@ const Result = () => {
           <div className="buttons">
             <button className="left" onClick={() => sendEvent("Evet")}>
               Evet
-            </button>
+                </button>
             <button className="mid" onClick={() => sendEvent("Kararsizim")}>
               Karasızım
-            </button>
+                </button>
             <button className="right" onClick={() => sendEvent("Hayir")}>
               Hayır
-            </button>
+                </button>
           </div>
         </div>)
       }
       { show && <p className="result-info">*Anket verileri <strong className="tooltip"> anonim</strong> şekilde saklanmaktadır.</p>}
+      <div className="twitter" onClick={redicectToTwitter}>{"Twitter'da Paylaş"}</div>
     </div>
   );
 };

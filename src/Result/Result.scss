@@ -87,6 +87,19 @@
   }
 }
 
+.twitter {
+  width: 15vh;
+  line-height: 45px;
+  text-align: center;
+  height: 45px;
+  border-radius: 15px;
+  background-color: #7E9FCB;
+  color: white;
+  font-weight: 400;
+  position: absolute;
+  bottom: -60px;
+}
+
 @media only screen and (max-width: 815px) and (max-width: 1366px) {
   .result {
     top: 20vh;
@@ -100,6 +113,15 @@
     left: unset;
     .result-heading {
       margin: 10px 0;
+      .result-text {
+        font-size: 22px;
+      }
     }
+    .result-info {
+      font-size: 11px;
+    }
+  }
+  .twitter {
+    width: 40vh;
   }
 }
