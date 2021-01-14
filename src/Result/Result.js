@@ -4,7 +4,7 @@ import "./Result.scss";
 
 const Result = () => {
 
-  const { group,line } = useInfo();
+  const { group, line } = useInfo();
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -18,15 +18,23 @@ const Result = () => {
     localStorage.setItem('voted', 'true');
     setShow(false);
   };
-  
+
   const redicectToTwitter = () => {
-    window.open(`https://twitter.com/intent/tweet?text=${group}.%20a%C5%9F%C4%B1%20grubunda%20${line}%20s%C4%B1ras%C4%B1nday%C4%B1m&url=https://hangiasigrubundayim.com/${group}.html`,"_blank")
+    line === "" ?
+    window.open(`https://twitter.com/intent/tweet?text=${group}.%20a%C5%9F%C4%B1%20grubunday%C4%B1m&url=https://hangiasigrubundayim.com/${group}.html`, "_blank")
+    :
+    window.open(`https://twitter.com/intent/tweet?text=${group}.%20a%C5%9F%C4%B1%20grubunda%20${line}%20s%C4%B1ras%C4%B1nday%C4%B1m&url=https://hangiasigrubundayim.com/${group}.html`, "_blank")
   }
 
   return (
     <div className="result">
       <div className="result-heading">
-        <h1 className="result-text" ><span className="important">{group}.</span> aşı grubunda <span className="important">{line}</span> sırasındasın.</h1>
+        {
+          line === "" ?
+            <h1 className="result-text"><span className="important">{group}.</span> aşı grubundasın.</h1>
+            :
+            <h1 className="result-text"><span className="important">{group}.</span> aşı grubunda <span className="important">{line}</span> sırasındasın.</h1>
+        }
       </div>
       { show && <div className="separator" />}
       { show &&
