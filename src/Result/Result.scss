@@ -6,7 +6,7 @@
   color: white;
   padding: 10px;
   border-radius: 25px;
-  background-color: #7E9FCB;
+  background-color: #7e9fcb;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -20,9 +20,9 @@
       margin-bottom: 10px;
       line-height: 20px;
       text-align: center;
-      .important{
+      .important {
         border-bottom: 1px solid white;
-
+        cursor: pointer;
       }
     }
   }
@@ -41,7 +41,6 @@
   .survey {
     text-align: center;
     width: 100%;
-    
 
     h2 {
       margin: 10px 0 15px 0;
@@ -64,6 +63,7 @@
         background-color: white;
         font-family: "Dosis", sans-serif;
         border-radius: 2px;
+        cursor: pointer;
       }
       .left {
         border-bottom-left-radius: 15px;
@@ -75,17 +75,33 @@
   }
 }
 
-.twitter {
-  width: 15vh;
+.button {
+  width: 40vh;
   line-height: 45px;
   text-align: center;
   height: 45px;
   border-radius: 15px;
-  background-color: #7E9FCB;
+  background-color: #7e9fcb;
   color: white;
   font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: scale(1.05);
+    transition: 150ms;
+  }
+}
+
+.twitter {
   position: absolute;
   bottom: -60px;
+}
+
+.back {
+  position: absolute;
+  bottom: -120px;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 815px) and (max-width: 1366px) {
