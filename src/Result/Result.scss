@@ -2,8 +2,9 @@
   position: absolute;
   font-family: "Dosis", sans-serif;
   width: 40vh;
+  padding: 1.5rem;
   left: 40vh;
-  padding: 10px;
+  box-shadow: 4px 4px 8px rgba(0,0%,60.8%,.3);
   border-radius: 25px;
   background-color: #7E9FCB;
   display: flex;
@@ -88,16 +89,17 @@
 }
 
 .twitter {
-  width: 15vh;
   line-height: 45px;
   text-align: center;
-  height: 45px;
+  box-shadow: 4px 4px 8px rgba(0,0%,60.8%,.3);  
+  padding: 0.5rem;
   border-radius: 15px;
   background-color: #7E9FCB;
   color: white;
   font-weight: 400;
   position: absolute;
-  bottom: -60px;
+  bottom: -80px;
+
 }
 
 @media only screen and (max-width: 815px) and (max-width: 1366px) {
