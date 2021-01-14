@@ -52,22 +52,6 @@ const Questions = () => {
           />
         )}
       </div>
-      <div className="second-line">
-        <p>Herhangi bir engeliniz var mı?</p>
-        {handicapped ? (
-          <img
-            src={Selected}
-            alt="Selected Checkbox"
-            onClick={() => changeHandicapped(false)}
-          />
-        ) : (
-          <img
-            src={Unselected}
-            alt="Unselected Checkbox"
-            onClick={() => changeHandicapped(true)}
-          />
-        )}
-      </div>
       <button className="cta" onClick={decideGroup}>
         Hesapla
       </button>

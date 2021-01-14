@@ -3,12 +3,12 @@
   font-family: "Dosis", sans-serif;
   width: 40vh;
   left: 40vh;
+  color: white;
   padding: 10px;
   border-radius: 25px;
   background-color: #7E9FCB;
   display: flex;
   flex-direction: column;
-  color: white;
   justify-items: center;
   align-items: center;
   .result-heading {
@@ -18,23 +18,11 @@
       font-size: 25px;
       margin: auto;
       margin-bottom: 10px;
-    }
-    .group {
-      line-height: 21px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px !important;
-      border: 3px solid white;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      padding: 5px;
-      margin-right: 10px;
-      span {
-        position: absolute;
-        margin-left: 22px;
+      line-height: 20px;
+      text-align: center;
+      .important{
+        border-bottom: 1px solid white;
+
       }
     }
   }
