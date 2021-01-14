@@ -13,15 +13,15 @@ const WithInfo = ({ children }) => {
     { type: "80-84 yaş arası", priority: 1, line: 'C2' },
     { type: "75-79 yaş arası", priority: 1, line: 'C3' },
     { type: "70-74 yaş arası", priority: 1, line: 'C4' },
-    { type: "65-69 yaş altı", priority: 1, line: 'C5' },
+    { type: "65-69 yaş arası", priority: 1, line: 'C5' },
 
-    { type: "60-64 yaş altı", priority: 2, line: 'B1' },
-    { type: "55-59 yaş altı", priority: 2, line: 'B2' },
-    { type: "50-54 yaş altı", priority: 2, line: 'B3' },
+    { type: "60-64 yaş arası", priority: 2, line: 'B1' },
+    { type: "55-59 yaş arası", priority: 2, line: 'B2' },
+    { type: "50-54 yaş arası", priority: 2, line: 'B3' },
 
-    { type: "40-49 yaş altı", priority: 3, line: 'A1a' },
-    { type: "30-39 yaş altı", priority: 3, line: 'A1b' },
-    { type: "18-29 yaş altı", priority: 3, line: 'A1c' }
+    { type: "40-49 yaş arası", priority: 3, line: 'A1a' },
+    { type: "30-39 yaş arası", priority: 3, line: 'A1b' },
+    { type: "18-29 yaş arası", priority: 3, line: 'A1c' }
   ];
   const occupationOptions = [
     { type: "Sağlık çalışanı", priority: 1, line: 'A' },
@@ -33,12 +33,12 @@ const WithInfo = ({ children }) => {
     { type: "Milli Savunma Bakanlığı", priority: 2, line: 'A1' },
     { type: "İçişleri Bakanlığı", priority: 2, line: 'A2' },
     { type: "Kritik görevlerde çalışan", priority: 2, line: 'A3' },
-    { type: "Zabıta, özel güvenlik", priority: 2, line: 'A4'},
-    { type: "Adalet Bakanlığı", priority: 2, line: 'A5'},
-    { type: "Ceza evleri", priority: 2, line: 'A6'},
-    { type: "Eğitim sektörü", priority: 2, line: 'A7'},
-    { type: "Gıda sektörü", priority: 2, line: 'A8'},
-    { type: "Taşımacılık sektörü", priority: 2, line: 'A9'},
+    { type: "Zabıta, özel güvenlik", priority: 2, line: 'A4' },
+    { type: "Adalet Bakanlığı", priority: 2, line: 'A5' },
+    { type: "Ceza evleri", priority: 2, line: 'A6' },
+    { type: "Eğitim sektörü", priority: 2, line: 'A7' },
+    { type: "Gıda sektörü", priority: 2, line: 'A8' },
+    { type: "Taşımacılık sektörü", priority: 2, line: 'A9' },
     { type: "Diğer", priority: 3 }
   ];
 
@@ -75,9 +75,9 @@ const WithInfo = ({ children }) => {
       const diseasePriority = !hasDisease
         ? 4
         : selectedAge.priority === 3
-        ? 3
-        : 2;
-      if(hasDisease && selectedAge.priority === 3) {
+          ? 3
+          : 2;
+      if (hasDisease && selectedAge.priority === 3) {
         selectedAge.line.replace("A", "B");
       }
       const decisionArray = [
@@ -106,7 +106,7 @@ const WithInfo = ({ children }) => {
     ageOptions,
     occupationOptions,
   };
-  
+
   return <InfoProvider value={props}>{children}</InfoProvider>;
 };
 
