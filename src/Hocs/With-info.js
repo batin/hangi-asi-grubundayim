@@ -19,6 +19,8 @@ const WithInfo = ({ children }) => {
     { type: "Kalabalık ortamlarda çalışan", priority: 2 },
     { type: "Öğrenci", priority: 4 },
     { type: "İşsiz", priority: 4 },
+    { type: "Emekli", priority: 3 }, // kac olur arastir
+    { type: "Evden çalışan", priority: 4 },
     { type: "Diğer", priority: 3 },
   ];
 

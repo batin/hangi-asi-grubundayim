@@ -16,6 +16,26 @@
       "src": "icon-500x500.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "Group1.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "Group2.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "Group3.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "Group4.png",
+      "type": "image/png",
+      "sizes": "500x500"
     }
   ],
   "start_url": ".",
