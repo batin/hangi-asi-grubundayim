@@ -1,5 +1,4 @@
 .result {
-  position: absolute;
   font-family: "Dosis", sans-serif;
   width: 40vh;
   left: 40vh;
@@ -22,7 +21,6 @@
       text-align: center;
       .important{
         border-bottom: 1px solid white;
-
       }
     }
   }
@@ -76,16 +74,19 @@
 }
 
 .twitter {
-  width: 15vh;
   line-height: 45px;
   text-align: center;
   height: 45px;
   border-radius: 15px;
-  background-color: #7E9FCB;
+  background-color: #1DA1F2;
   color: white;
   font-weight: 400;
-  position: absolute;
-  bottom: -60px;
+  cursor: pointer;
+  width: inherit;
+  transition: .2s;
+  &:hover {
+    background-color: #1A91DA;
+  }
 }
 
 @media only screen and (max-width: 815px) and (max-width: 1366px) {
@@ -108,8 +109,5 @@
     .result-info {
       font-size: 11px;
     }
-  }
-  .twitter {
-    width: 40vh;
   }
 }

@@ -7,9 +7,6 @@
   position: relative;
   padding: 0 0 0 15px;
   min-width: 250px;
-  &:last-child {
-    margin-left: 20px;
-  }
   .select {
     font-family: "Dosis", sans-serif;
     font-size: 16px;
@@ -24,16 +21,10 @@
     border: none;
     border-radius: 12.5px;
     padding: 5px;
+    cursor: pointer;
     &:focus {
       outline: none;
     }
-
-  }
-}
-
-@media screen and (max-width: 768px){
-  .select-wrapper:last-child {
-    margin-left: unset;
   }
 }
 
