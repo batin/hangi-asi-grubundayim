@@ -29,9 +29,13 @@ function App() {
             <p className="info">*Hesaplamalar tahmini veriler ile yapılmaktadır.</p>
             <a href="https://twitter.com/btnerylmz" target="_blank" rel="noreferrer"><img className="twitter-icon" src={twitter} alt="Twitter Icon" /></a>
           </Route>
+          <Route path="/1.html">
+          </Route>
           <Route path="/2.html">
           </Route>
-          <Route path="/1.html">
+          <Route path="/3.html">
+          </Route>
+          <Route path="/4.html">
           </Route>
         </Switch>
       </Router>
