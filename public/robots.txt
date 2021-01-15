@@ -1,6 +1,2 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /1.html
-Disallow: /2.html
-Disallow: /3.html
-Disallow: /4.html
