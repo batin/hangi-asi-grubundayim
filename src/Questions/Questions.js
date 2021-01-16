@@ -3,15 +3,14 @@ import { Select } from "../Select/Select";
 import "./Questions.scss";
 import Unselected from "../Assets/unselected.svg";
 import Selected from "../Assets/selected.svg";
-
+import SelectedDark from "../Assets/selected-dark.svg";
+import { ReactSVG } from 'react-svg'
 import { useInfo } from "../Context/Info";
 
 const Questions = () => {
   const {
     hasDisease,
     changeHasDisease,
-    handicapped,
-    changeHandicapped,
     age,
     changeAge,
     occupation,
@@ -19,6 +18,7 @@ const Questions = () => {
     decideGroup,
     ageOptions,
     occupationOptions,
+    themes
   } = useInfo();
   return (
     <div className="questions">
@@ -39,18 +39,15 @@ const Questions = () => {
       <div className="second-line">
         <p>Kronik hastalığınız var mı?</p>
         {hasDisease ? (
-          <img
-            src={Selected}
-            alt="Selected Checkbox"
-            onClick={() => changeHasDisease(false)}
-          />
+          themes.name === "dark" ? <ReactSVG src={SelectedDark} alt="Selected Checkbox"
+            onClick={() => changeHasDisease(false)} /> :
+            <ReactSVG src={Selected} alt="Selected Checkbox"
+              onClick={() => changeHasDisease(false)} />
+
         ) : (
-          <img
-            src={Unselected}
-            alt="Unselected Checkbox"
-            onClick={() => changeHasDisease(true)}
-          />
-        )}
+            <ReactSVG src={Unselected} alt="Unselected Checkbox"
+              onClick={() => changeHasDisease(true)} />
+          )}
       </div>
       <button className="cta" onClick={decideGroup}>
         Hesapla

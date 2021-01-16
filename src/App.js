@@ -7,6 +7,7 @@ import { Content } from "./Content/Content";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage";
 import Theme from "./Theme/Theme";
+import { ReactSVG } from 'react-svg'
 
 function App() {
   useEffect(() => {

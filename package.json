@@ -12,6 +12,7 @@
     "react-gtm-module": "^2.0.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-svg": "^11.2.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

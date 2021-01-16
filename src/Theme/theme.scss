@@ -1,9 +1,12 @@
-.theme-button{
+.theme-button {
   position: absolute;
   top: 10px;
   right: 5px;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: .5s all;
+  transition: 0.5s all;
+  &:focus {
+    outline: none;
+  }
 }

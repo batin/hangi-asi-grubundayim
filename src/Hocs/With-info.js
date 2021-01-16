@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { InfoProvider } from "../Context/Info";
+import { Questions } from "../Questions/Questions";
 
 const theme = {
   dark: {
@@ -8,19 +9,22 @@ const theme = {
       background: '#343b42',
       color: '#e7eff3'
     },
-    select:{
+    select: {
       background: '#175157',
       color: '#e7eff3',
+    },
+    questions: {
+      stroke: '#fff'
     }
 
   },
   light: {
     name: 'light',
-    body:{
+    body: {
       background: '#fff',
       color: '#222',
     },
-    select:{
+    select: {
       background: '#e7eff3',
       color: '#222',
     }
@@ -31,7 +35,6 @@ const themeName = localStorage.getItem('theme');
 
 const WithInfo = ({ children }) => {
   const [hasDisease, setHasDisease] = useState(false);
-  const [handicapped, setHandicapped] = useState(false);
   const [age, setAge] = useState(-1);
   const [occupation, setOccupation] = useState(-1);
   const [group, setGroup] = useState(0);
@@ -75,12 +78,6 @@ const WithInfo = ({ children }) => {
   const changeHasDisease = (disease) => {
     if (typeof disease == "boolean") {
       setHasDisease(disease);
-    }
-  };
-
-  const changeHandicapped = (handicapped) => {
-    if (typeof handicapped == "boolean") {
-      setHandicapped(handicapped);
     }
   };
 
@@ -145,8 +142,6 @@ const WithInfo = ({ children }) => {
   const props = {
     hasDisease,
     changeHasDisease,
-    handicapped,
-    changeHandicapped,
     age,
     changeAge,
     occupation,
