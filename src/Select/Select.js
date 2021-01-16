@@ -1,11 +1,14 @@
 import React from "react";
+import { useInfo } from "../Context/Info";
 import "./Select.scss";
 import DropdownIcon from "../Assets/dropdown-item.svg";
 
 const Select = ({ options, value = -1, setValue, firstValue }) => {
+  const { themes } = useInfo();
   return (
-    <div className="select-wrapper xl">
+    <div style={themes.select} className="select-wrapper xl">
       <select
+        style={themes.select}
         className="select"
         value={value}
         onChange={(e) => setValue(e.target.value)}
