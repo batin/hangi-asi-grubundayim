@@ -1,0 +1,19 @@
+.NotFoundPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.notFoundStatus {
+		font-size: 200px;
+		margin: 0px;
+	}
+
+	.desc {
+		margin: 0px;
+		font-size: 20px;
+		text-decoration: none;
+	}
+}
+
+

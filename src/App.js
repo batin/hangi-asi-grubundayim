@@ -4,13 +4,9 @@ import { WithInfo } from "./Hocs/With-info";
 import Richie from "./Assets/richie.png";
 import twitter from "./Assets/twitter.webp";
 import { Content } from "./Content/Content";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFoundPage from "./components/NotFoundPage";
 import Theme from "./Theme/Theme";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -22,12 +18,11 @@ function App() {
       <Theme>
         <Router>
           <Switch>
-            <Route path="/1.html"></Route>
-            <Route path="/2.html"></Route>
-            <Route path="/3.html"></Route>
-            <Route path="/4.html"></Route>
-            <Route path="/*">
-              <Redirect from="/*" to="/" />
+            <Route path="/1.html" />
+            <Route path="/2.html" />
+            <Route path="/3.html" />
+            <Route path="/4.html" />
+            <Route exact path="/">
               <h1 className="heading">Hangi aşı grubundayım?</h1>
               <Content />
               <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
@@ -46,6 +41,7 @@ function App() {
                 />
               </a>
             </Route>
+            <Route path="*" component={NotFoundPage} />
           </Switch>
         </Router>
       </Theme>
