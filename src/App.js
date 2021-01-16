@@ -4,45 +4,52 @@ import { WithInfo } from "./Hocs/With-info";
 import Richie from "./Assets/richie.png";
 import twitter from "./Assets/twitter.webp";
 import { Content } from "./Content/Content";
+import Theme from "./Theme/Theme";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 
 function App() {
-
   useEffect(() => {
-    window.send({ event: `PageView` })
-  }, [])
+    window.send({ event: `PageView` });
+  }, []);
 
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/1.html">
-          </Route>
-          <Route path="/2.html">
-          </Route>
-          <Route path="/3.html">
-          </Route>
-          <Route path="/4.html">
-          </Route>
-          <Route path="/*">
-            <Redirect from="/*" to="/" />
-            <WithInfo>
+    <WithInfo>
+      <Theme>
+        <Router>
+          <Switch>
+            <Route path="/1.html"></Route>
+            <Route path="/2.html"></Route>
+            <Route path="/3.html"></Route>
+            <Route path="/4.html"></Route>
+            <Route path="/*">
+              <Redirect from="/*" to="/" />
               <h1 className="heading">Hangi aşı grubundayım?</h1>
               <Content />
               <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
-            </WithInfo>
-            <p className="info">*Hesaplamalar tahmini veriler ile yapılmaktadır.</p>
-            <a href="https://twitter.com/btnerylmz" target="_blank" rel="noreferrer"><img className="twitter-icon" src={twitter} alt="Twitter Icon" /></a>
-          </Route>
-        </Switch>
-      </Router>
-
-    </div>
+              <p className="info">
+                *Hesaplamalar tahmini veriler ile yapılmaktadır.
+              </p>
+              <a
+                href="https://twitter.com/btnerylmz"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="twitter-icon"
+                  src={twitter}
+                  alt="Twitter Icon"
+                />
+              </a>
+            </Route>
+          </Switch>
+        </Router>
+      </Theme>
+    </WithInfo>
   );
 }
 
