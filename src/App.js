@@ -7,7 +7,8 @@ import { Content } from "./Content/Content";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage";
 import Theme from "./Theme/Theme";
-import { ReactSVG } from 'react-svg'
+import { ReactSVG } from 'react-svg';
+import { motion } from 'framer-motion';
 
 function App() {
   useEffect(() => {
@@ -24,9 +25,9 @@ function App() {
             <Route path="/3.html" />
             <Route path="/4.html" />
             <Route exact path="/">
-              <h1 className="heading">Hangi aşı grubundayım?</h1>
+              <motion.h1 initial={{ y: "-100%", opacity: 0 }} animate={{ y: "0%", opacity: 1 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} className="heading">Hangi aşı grubundayım?</motion.h1>
               <Content />
-              <img className="homepage-icon" src={Richie} alt="Homepage Icon" />
+              <motion.img initial={{ x: "10%", opacity: 0 }} animate={{ x: "0%", opacity: 1 }} transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }} className="homepage-icon" src={Richie} alt="Homepage Icon" />
               <p className="info">
                 *Hesaplamalar tahmini veriler ile yapılmaktadır.
               </p>
