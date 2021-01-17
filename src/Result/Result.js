@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useInfo } from "../Context/Info";
 import "./Result.scss";
+import { motion } from 'framer-motion';
 
 const Result = () => {
 
@@ -34,7 +35,7 @@ const Result = () => {
   };
 
   return (
-    <div className="result">
+    <motion.div initial={{ x: "-50%", opacity: 0 }} animate={{ x: "0%", opacity: 1 }} transition={{ duration: 0.8, delay: 0.2, ease: "backOut" }} className="result">
       <div className="result-heading">
         {line === "" ? (
           <h1 className="result-text">
@@ -79,13 +80,13 @@ const Result = () => {
           saklanmaktadır.
         </p>
       )}
-      <div className="twitter button" onClick={redirectToTwitter}>
+      <motion.div initial={{ y: "-50%", opacity: 0 }} animate={{ y: "0%", opacity: 1 }} transition={{ duration: 0.5, delay: 0.8, ease: "backOut" }}  className="twitter button" onClick={redirectToTwitter}>
         {"Twitter'da Paylaş"}
-      </div>
-      <a className="back button" href="/">
+      </motion.div>
+      <motion.a initial={{ y: "-50%", opacity: 0 }} animate={{ y: "0%", opacity: 1 }} transition={{ duration: 0.5, delay: 1, ease: "backOut" }}  className="back button" href="/">
         {"Geri Dön"}
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 };
 

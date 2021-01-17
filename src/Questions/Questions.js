@@ -6,6 +6,7 @@ import Selected from "../Assets/selected.svg";
 import SelectedDark from "../Assets/selected-dark.svg";
 import { ReactSVG } from 'react-svg'
 import { useInfo } from "../Context/Info";
+import { motion } from 'framer-motion';
 
 const Questions = () => {
   const {
@@ -21,7 +22,7 @@ const Questions = () => {
     themes
   } = useInfo();
   return (
-    <div className="questions">
+    <motion.div initial={{ x: "-10%", opacity: 0 }} animate={{ x: "0%", opacity: 1 }} transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }} className="questions">
       <div className="first-line">
         <Select
           options={occupationOptions}
@@ -52,7 +53,7 @@ const Questions = () => {
       <button className="cta" onClick={decideGroup}>
         Hesapla
       </button>
-    </div>
+    </motion.div>
   );
 };
 
