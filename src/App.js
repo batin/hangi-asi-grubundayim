@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
-import "./App.scss";
+import { useEffect } from "react";
 import Richie from "./Assets/richie.png";
 import twitter from "./Assets/twitter.webp";
-import { Content } from "./Components/Content/";
 import { ThemeButton } from "./Components/ThemeButton/";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NotFoundPage from "./Pages/NotFoundPage";
 import { motion } from 'framer-motion';
+import { useInfo } from "../../Context/Info";
 import { useTheme } from "./Context/Theme";
+
+import "./App.scss";
 
 function App() {
   const { theme } = useTheme();
+  const { group } = useInfo();
 
   useEffect(() => {
     window.send({ event: `PageView` });
@@ -26,7 +28,7 @@ function App() {
           <Route path="/4.html" />
           <Route exact path="/">
             <motion.h1 initial={{ y: "-100%", opacity: 0 }} animate={{ y: "0%", opacity: 1 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} className="heading">Hangi aşı grubundayım?</motion.h1>
-            <Content />
+            { group === 0 ? <QuestionsPage /> : <ResultPage /> }
             <ThemeButton />
             <motion.img initial={{ x: "10%", opacity: 0 }} animate={{ x: "0%", opacity: 1 }} transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }} className="homepage-icon" src={Richie} alt="Homepage Icon" />
             <p className="info">
