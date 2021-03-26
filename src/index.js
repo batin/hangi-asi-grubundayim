@@ -2,11 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
+import { WithInfo } from "./Hocs/With-info";
+import { WithTheme } from "./Hocs/With-theme";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WithTheme>
+      <WithInfo>
+        <App />
+      </WithInfo>
+    </WithTheme>
   </React.StrictMode>,
   document.getElementById("root")
 );

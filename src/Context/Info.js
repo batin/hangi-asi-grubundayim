@@ -4,6 +4,14 @@ const defaultContext = {
   hasDisease: false,
   age: "",
   occupation: "",
+  group: "",
+  line: "",
+  ageOptions: {},
+  occupationOptions: {},
+  changeHasDisease: () => {},
+  changeAge: () => {},
+  changeOccupation: () => {},
+  decideGroup: () => {},
 };
 
 const InfoContext = React.createContext(defaultContext);

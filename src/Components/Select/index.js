@@ -1,17 +1,18 @@
 import React from "react";
-import { useInfo } from "../Context/Info";
-import "./Select.scss";
-import DropdownIcon from "../Assets/dropdown-item.svg";
+import DropdownIcon from "../../Assets/dropdown-item.svg";
+import { useTheme } from "../../Context/Theme";
+import "./style.scss";
 
 const Select = ({ options, value = -1, setValue, firstValue }) => {
-  const { themes } = useInfo();
+  const { theme } = useTheme();
+
   return (
-    <div style={themes.select} className="select-wrapper xl">
+    <div style={theme.select} className="select-wrapper xl">
       <select
-        style={themes.select}
+        style={theme.select}
         className="select"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={e => setValue(e.target.value)}
       >
         {value === -1 && firstValue}
         {options && Array.isArray(options) &&

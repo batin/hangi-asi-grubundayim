@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Richie from "../../Assets/richie.png";
+import "./style.scss";
 
-import style from "./style.module.scss";
+const NotFoundPage = () => {
+	setTimeout(() => {
+		window.location.href = "/";
+	}, 5000);
 
-function NotFoundPage() {
-	 setTimeout(function () {
-			window.location.href = "/";
-		}, 5000);
 	return (
-		<div className={style.NotFoundPage}>
-			<h1 className={style.notFoundStatus}>404</h1>
+		<div className="not-found-page">
+			<h1 className="not-found-status">404</h1>
 			<img className="homepage-icon" src={Richie} alt="Homepage Icon" />
 			<p>
-				<Link className={style.desc} to="/">
+				<Link className="description" to="/">
 					<p>Ana sayfaya dön</p>
 				</Link>
 			</p>

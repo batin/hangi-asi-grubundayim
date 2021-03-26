@@ -1,37 +1,5 @@
 import React, { useState } from "react";
 import { InfoProvider } from "../Context/Info";
-import { Questions } from "../Questions/Questions";
-
-const theme = {
-  dark: {
-    name: 'dark',
-    body: {
-      background: '#343b42',
-      color: '#e7eff3'
-    },
-    select: {
-      background: '#175157',
-      color: '#e7eff3',
-    },
-    questions: {
-      stroke: '#fff'
-    }
-
-  },
-  light: {
-    name: 'light',
-    body: {
-      background: '#fff',
-      color: '#222',
-    },
-    select: {
-      background: '#e7eff3',
-      color: '#222',
-    }
-  }
-}
-
-const themeName = localStorage.getItem('theme');
 
 const WithInfo = ({ children }) => {
   const [hasDisease, setHasDisease] = useState(false);
@@ -39,8 +7,6 @@ const WithInfo = ({ children }) => {
   const [occupation, setOccupation] = useState(-1);
   const [group, setGroup] = useState(0);
   const [line, setLine] = useState("");
-  const [themes, setThemes] = useState(theme[themeName] || theme.light);
-
 
   const ageOptions = [
     { type: "85 yaş üzeri", priority: 1, line: 'C1' },
@@ -93,16 +59,6 @@ const WithInfo = ({ children }) => {
     }
   };
 
-  const changeTheme = () => {
-    if (themes === theme.dark) {
-      localStorage.setItem('theme', 'light');
-      setThemes(theme.light);
-    } else {
-      localStorage.setItem('theme', 'dark');
-      setThemes(theme.dark);
-    }
-  }
-
   const decideGroup = () => {
     if (age !== -1 && occupation !== -1) {
       const selectedOcc = occupationOptions.find(
@@ -151,8 +107,6 @@ const WithInfo = ({ children }) => {
     decideGroup,
     ageOptions,
     occupationOptions,
-    changeTheme,
-    themes,
   };
 
   return <InfoProvider value={props}>{children}</InfoProvider>;

@@ -1,15 +1,15 @@
-.NotFoundPage {
+.not-found-page {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 
-	.notFoundStatus {
+	.not-found-status {
 		font-size: 200px;
 		margin: 0px;
 	}
 
-	.desc {
+	.description {
 		margin: 0px;
 		font-size: 20px;
 		text-decoration: none;

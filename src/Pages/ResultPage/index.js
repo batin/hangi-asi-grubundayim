@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useInfo } from "../Context/Info";
-import "./Result.scss";
+import { useInfo } from "../../Context/Info";
 import { motion } from 'framer-motion';
+import "./style.scss";
 
-const Result = () => {
+const ResultPage = () => {
 
   const { group, line } = useInfo();
   const [show, setShow] = useState(true);
@@ -90,4 +90,4 @@ const Result = () => {
   );
 };
 
-export { Result };
+export { ResultPage };
