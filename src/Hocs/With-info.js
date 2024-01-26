@@ -90,7 +90,6 @@ const WithInfo = ({ children }) => {
           setLine(selectedAge.line);
         }
       }
-      window.send({ UserAge: selectedAge.type, UserOccupation: selectedOcc.type, UserLine: line })
       setGroup(decision);
     }
   };

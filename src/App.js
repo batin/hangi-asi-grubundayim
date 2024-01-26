@@ -14,10 +14,6 @@ function App() {
   const { theme } = useTheme();
   const { group } = useInfo();
 
-  useEffect(() => {
-    window.send({ event: `PageView` });
-  }, []);
-
   return (
     <div className="App" style={theme.body}>
       <Router>
