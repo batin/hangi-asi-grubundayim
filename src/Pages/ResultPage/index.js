@@ -13,7 +13,7 @@ const ResultPage = () => {
     setShow(Boolean(!hasVoted));
   }, [])
 
-  const sendEvent = (event) => {
+  const onClick = () => {
     localStorage.setItem("voted", "true");
     setShow(false);
   };
@@ -60,13 +60,13 @@ const ResultPage = () => {
         <div className="survey">
           <h2>Aşı olmayı düşünüyor musun?</h2>
           <div className="buttons">
-            <button className="left" onClick={() => sendEvent("Evet")}>
+            <button className="left" onClick={onClick}>
               Evet
             </button>
-            <button className="mid" onClick={() => sendEvent("Kararsizim")}>
+            <button className="mid" onClick={onClick}>
               Karasızım
             </button>
-            <button className="right" onClick={() => sendEvent("Hayir")}>
+            <button className="right" onClick={onClick}>
               Hayır
             </button>
           </div>
